@@ -1,8 +1,25 @@
 .App {
   text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 
-.App-logo {
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.calc-wrapper {
+  height: 600px;
+  width: 400px;
+}
+
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +52,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
