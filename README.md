@@ -4,4 +4,6 @@
 
 - This application state is managed by React Hooks.
 
-### Application still in progress
+### Application screenshot
+
+<img src="images/react_calculator.png" >
