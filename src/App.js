@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-// import Header from './components/Header';
 import Calculator from './components/Calculator';
-// import Input from './components/Input';
 
 function App() {
 
@@ -10,10 +8,6 @@ function App() {
   const [prvNum, setPrvNum] = useState('');
   const [currNum, setCurrNum] = useState('');
   const [operator, setOperator] = useState('');
-
-  const handleChange = e => {
-    setResult( e.target.value );
-  }
 
   const addTo = val => {
     setResult( result + val );
@@ -46,35 +40,22 @@ function App() {
   const evaluate = () => {
     setCurrNum( result );
     if( operator === "plus" ) {
-      let results =  parseInt(prvNum) + parseInt(currNum);
-      setResult( results );
-      console.log( results );
-      return result;
+      setResult( parseInt(prvNum) + parseInt(currNum) );
     }
     else if( operator === "subtract" ) {
-      let results =  parseInt(prvNum) - parseInt(currNum);
-      setResult( results );
-      console.log( results );
-      return result;
+      setResult( parseInt(prvNum) - parseInt(currNum) );
     }
     else if( operator === "multiply" ) {
-      let results =  parseInt(prvNum) * parseInt(currNum);
-      setResult( results );
-      console.log( results );
-      return result;
+      setResult( parseInt(prvNum) * parseInt(currNum) );
     }
     else if( operator === "divide" ) {
-      let results =  parseInt(prvNum) / parseInt(currNum);
-      setResult( results );
-      console.log( results );
-      return result;
+      setResult( parseInt(prvNum) / parseInt(currNum) );
     }
   }
 
   return (
     <div className="App">
       <Calculator
-      handleChange={handleChange}
       sum={sum}
       sub={sub}
       multi={multi}
