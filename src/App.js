@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
 import Calculator from './components/Calculator';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -55,6 +57,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header/>
       <Calculator
       sum={sum}
       sub={sub}
@@ -64,6 +67,7 @@ function App() {
       result={result}
       handleBtn={addTo}
       />
+      <Footer/>
     </div>
   );
 }

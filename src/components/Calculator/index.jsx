@@ -6,7 +6,6 @@ function Calculator (props){
     return (
         <div className="d-flex justify-content-center">
             <div className="calc-wrapper">
-            <h2 className="title">Basic Calculator</h2>
             <div className="row">
             <div className="result">{props.result}</div>
             </div>

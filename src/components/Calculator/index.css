@@ -1,6 +1,7 @@
 .title {
   color: #a52a2a;
-  font-size: 2.5em;
+  font-size: 1.5em;
+  text-align: center;
 }
 
 .result {
@@ -10,7 +11,7 @@
   font-weight: lighter;
   resize: horizontal;
   justify-content: flex-end;
-  font-size: 5em;
+  font-size: 2.5em;
   background-color: #535151;
   color: #ffffff;
   padding: 0.5em 0.2em 0 0;
@@ -18,46 +19,33 @@
  
 }
 
-input {
-  resize: horizontal;
-  width: 200px;
-}
-
-.input:active {
-  width: auto;   
-}
-
-.input:focus {
-  min-width: 200px;
-}
-
 .btnNum {
-    min-height: 3em;
+    min-height: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bolder;
-    font-size: 1.9em;
+    font-weight: 300;
+    font-size: 1.2em;
     background-color: #888888;
     color: #fff;
     flex: 1;
-    /* margin-top: -20px; */
     outline: 1px solid #0c0c0c;
 }
 
 .operator {
     background-color: #fe9241;
     color: #ffffff;
-    font-size: 2.2em;
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
 #clear-btn {
-  height: 4em;
+  min-height: 2.5em;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bolder;
-  font-size: 1.4em;
+  font-weight: 300;
+  font-size: 1.2em;
   /* background-color: #9e9ba8; */
   background-color: #888888;
   color: #fff;
