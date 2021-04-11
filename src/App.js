@@ -22,8 +22,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Header/> */}
-      {/* <Input input={input}/> */}
       <Calculator
       input={input}
       handleBtn={addTo}
