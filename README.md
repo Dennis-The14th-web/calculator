@@ -6,4 +6,4 @@
 
 ### Application screenshot
 
-<img src="images/react_calculator.png" >
+<img src="public/images/react_calculator.png" >
