@@ -1,13 +1,15 @@
-.input {
+.title {
+  color: #a52a2a;
+  font-size: 2.5em;
+}
+
+.result {
   width: 100%;
   min-height: 2em;
   display: flex;
-  text-align: end;
   font-weight: lighter;
   resize: horizontal;
-  /* justify-content: left; */
-  /* align-items: center; */
-  /* font-weight: lighter; */
+  justify-content: flex-end;
   font-size: 5em;
   background-color: #535151;
   color: #ffffff;

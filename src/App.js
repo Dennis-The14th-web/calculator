@@ -6,24 +6,81 @@ import Calculator from './components/Calculator';
 
 function App() {
 
-  const [input, setInput] = useState('');
+  const [result, setResult] = useState('');
+  const [prvNum, setPrvNum] = useState('');
+  const [currNum, setCurrNum] = useState('');
+  const [operator, setOperator] = useState('');
 
-  const addTo = val => {
-    // if(val === "="){
-    //   calc();
-    // }
-    setInput( input + val )
-    console.log(input);
+  const handleChange = e => {
+    setResult( e.target.value );
   }
 
-  // const calc = () => {
-  //   setInput(eval(input));
-  // }
+  const addTo = val => {
+    setResult( result + val );
+  }
+
+  const sum = () => {
+    setPrvNum( result );
+    setResult( "" );
+    setOperator( "plus" );
+  };
+
+  const sub = () => {
+    setPrvNum( result );
+    setResult( "" );
+    setOperator( "subtract" );
+  };
+
+  const multi = () => {
+    setPrvNum( result );
+    setResult( "" );
+    setOperator( "multiply" );
+  };
+
+  const div = () => {
+    setPrvNum( result );
+    setResult( "" );
+    setOperator( "divide" );
+  };
+
+  const evaluate = () => {
+    setCurrNum( result );
+    if( operator === "plus" ) {
+      let results =  parseInt(prvNum) + parseInt(currNum);
+      setResult( results );
+      console.log( results );
+      return result;
+    }
+    else if( operator === "subtract" ) {
+      let results =  parseInt(prvNum) - parseInt(currNum);
+      setResult( results );
+      console.log( results );
+      return result;
+    }
+    else if( operator === "multiply" ) {
+      let results =  parseInt(prvNum) * parseInt(currNum);
+      setResult( results );
+      console.log( results );
+      return result;
+    }
+    else if( operator === "divide" ) {
+      let results =  parseInt(prvNum) / parseInt(currNum);
+      setResult( results );
+      console.log( results );
+      return result;
+    }
+  }
 
   return (
     <div className="App">
       <Calculator
-      input={input}
+      handleChange={handleChange}
+      sum={sum}
+      sub={sub}
+      multi={multi}
+      div={div}
+      eval={evaluate}
+      result={result}
       handleBtn={addTo}
       />
     </div>
