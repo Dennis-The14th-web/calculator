@@ -8,19 +8,18 @@ function App() {
 
   const [result, setResult] = useState('');
   const [prvNum, setPrvNum] = useState('');
-  const [currNum, setCurrNum] = useState('');
   const [operator, setOperator] = useState('');
 
   const addTo = val => {
     let results = result + val;
     setResult( results );
-    console.log(results);
   }
 
   const addZero = (val) => {
     if ( result !== "" ) {
       val = 0;
-      setResult( result + val );
+      let display = result + val;
+      setResult( display );
     }
   }
 
@@ -37,11 +36,12 @@ function App() {
 
   const clearResult = () => {
     setResult( "" );
+    setPrvNum( "" );
+    setOperator( "" );
   }
 
   const sum = () => {
-    setPrvNum( result );
-    setCurrNum( result );
+    setPrvNum( result  );
     setResult( "" );
     setOperator( "plus" );
   };
@@ -64,27 +64,28 @@ function App() {
     setOperator( "divide" );
   };
 
+  const rmdr = () => {
+    setPrvNum( result );
+    setResult( "" );
+    setOperator( "reminder" );
+  };
+
   const evaluate = () => {
-    setCurrNum( result );
     if( operator === "plus" ) {
-      let num1 = parseInt(prvNum);
-      let num2 = parseInt(currNum);
-      let results = num1 + num2;
-      setResult( results );
-      console.log("num1: ", num1);
-      console.log("num2: ", num2);
-      console.log( results );
+      setResult( parseInt(prvNum) + parseInt(result) );
     }
     else if( operator === "subtract" ) {
-      setResult( parseInt(prvNum) - parseInt(currNum) );
+      setResult( parseInt(prvNum) - parseInt(result) );
     }
     else if( operator === "multiply" ) {
-      setResult( parseInt(prvNum) * parseInt(currNum) );
+      setResult( parseInt(prvNum) * parseInt(result) );
     }
     else if( operator === "divide" ) {
-      setResult( parseInt(prvNum) / parseInt(currNum) );
+      setResult( parseInt(prvNum) / parseInt(result) );
     }
-    // setCurrNum( result );
+    else if( operator === "reminder" ) {
+      setResult( parseInt(prvNum) % parseInt(result) );
+    }
   }
 
   return (
@@ -99,6 +100,7 @@ function App() {
       sub={sub}
       multi={multi}
       div={div}
+      rmdr={rmdr}
       eval={evaluate}
       result={result}
       handleBtn={addTo}

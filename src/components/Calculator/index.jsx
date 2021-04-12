@@ -30,7 +30,7 @@ function Calculator (props){
             <div className="row">
             <button className="btn btn-light btnNum" onClick={props.addZero} name="0">0</button>
             <button className="btn btn-light btnNum" onClick={props.addDecimal} name=".">.</button>
-            <button className="btn btn-light btnNum" onClick={props.eval} name="=">=</button>
+            <button className="btn btn-light btnNum" onClick={e=>props.eval(e)} name="=">=</button>
             <button className="btn btn-light btnNum operator" onClick={props.sub} name="-">-</button>
             </div>
             <div className="row">
