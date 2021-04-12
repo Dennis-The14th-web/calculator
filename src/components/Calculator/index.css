@@ -6,7 +6,7 @@
   resize: horizontal;
   justify-content: flex-end;
   font-size: 2.5em;
-  background-color: #535151;
+  background-color: #353538;
   color: #ffffff;
   padding: 0.5em 0.2em 0 0;
   margin-top: 2.5em;
@@ -21,7 +21,7 @@
     align-items: center;
     font-weight: 300;
     font-size: 1.2em;
-    background-color: #888888;
+    background-color: #6c6a74;
     color: #fff;
     flex: 1;
     outline: 1px solid #0c0c0c;
@@ -34,15 +34,19 @@
     font-weight: 300;
 }
 
+.style {
+  background-color: #444346;
+}
+
 #clear-btn {
+  min-width: 50%;
   min-height: 2.5em;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 300;
   font-size: 1.2em;
-  /* background-color: #9e9ba8; */
-  background-color: #888888;
+  background-color: #6c6a74;
   color: #fff;
   flex: 1;
   outline: 1px solid #0c0c0c;
