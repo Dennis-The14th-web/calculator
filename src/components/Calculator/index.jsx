@@ -28,13 +28,13 @@ function Calculator (props){
             <button className="btn btn-light btnNum operator" onClick={props.sum} name="+">+</button>
             </div>
             <div className="row">
-            <button className="btn btn-light btnNum" onClick={e=>props.handleBtn(e.target.name)} name="0">0</button>
-            <button className="btn btn-light btnNum" onClick={e=>props.handleBtn(e.target.name)} name=".">.</button>
-            <button className="btn btn-light btnNum" onClick={e=>props.eval(e.target.name)} name="=">=</button>
+            <button className="btn btn-light btnNum" onClick={props.addZero} name="0">0</button>
+            <button className="btn btn-light btnNum" onClick={props.addDecimal} name=".">.</button>
+            <button className="btn btn-light btnNum" onClick={props.eval} name="=">=</button>
             <button className="btn btn-light btnNum operator" onClick={props.sub} name="-">-</button>
             </div>
             <div className="row">
-            <button className="btn btn-light btnNum" onClick={e=>props.handleBtn(e.target.name)} name="" id="clear-btn">Clear</button>
+            <button className="btn btn-light btnNum" onClick={props.clearResult} name="Clear" id="clear-btn">Clear</button>
             </div>
             </div>
         </div>

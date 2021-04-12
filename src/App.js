@@ -12,11 +12,36 @@ function App() {
   const [operator, setOperator] = useState('');
 
   const addTo = val => {
-    setResult( result + val );
+    let results = result + val;
+    setResult( results );
+    console.log(results);
+  }
+
+  const addZero = (val) => {
+    if ( result !== "" ) {
+      val = 0;
+      setResult( result + val );
+    }
+  }
+
+  const addDecimal = val => {
+    if (result.indexOf(".") === -1) {
+      val = ".";
+      setResult( result + val)
+    }
+  }
+
+  const clearResultIndex = () => {
+    setResult( result.slice(0, -1));
+  }
+
+  const clearResult = () => {
+    setResult( "" );
   }
 
   const sum = () => {
     setPrvNum( result );
+    setCurrNum( result );
     setResult( "" );
     setOperator( "plus" );
   };
@@ -42,7 +67,13 @@ function App() {
   const evaluate = () => {
     setCurrNum( result );
     if( operator === "plus" ) {
-      setResult( parseInt(prvNum) + parseInt(currNum) );
+      let num1 = parseInt(prvNum);
+      let num2 = parseInt(currNum);
+      let results = num1 + num2;
+      setResult( results );
+      console.log("num1: ", num1);
+      console.log("num2: ", num2);
+      console.log( results );
     }
     else if( operator === "subtract" ) {
       setResult( parseInt(prvNum) - parseInt(currNum) );
@@ -53,12 +84,17 @@ function App() {
     else if( operator === "divide" ) {
       setResult( parseInt(prvNum) / parseInt(currNum) );
     }
+    // setCurrNum( result );
   }
 
   return (
     <div className="App">
       <Header/>
       <Calculator
+      addZero={addZero}
+      addDecimal={addDecimal}
+      clearResult={clearResult}
+      clearIndex={clearResultIndex}
       sum={sum}
       sub={sub}
       multi={multi}
