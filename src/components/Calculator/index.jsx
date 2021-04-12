@@ -10,9 +10,9 @@ function Calculator (props){
             <div className="result">{props.result}</div>
             </div>
             <div className="row">
-            <button className="btn btn-light btnNum style" onClick={props.clearResult} name="Clear">AC</button>
+            <button className="btn btn-light btnNum style" onClick={props.clearIndex} name="Clear">AC</button>
             <button className="btn btn-light btnNum style" onClick={props.clearResult} name="Clear">C</button>
-            <button className="btn btn-light btnNum style" onClick={props.clearResult} name="Clear">%</button>
+            <button className="btn btn-light btnNum style" onClick={props.rmdr} name="Clear">%</button>
             <button className="btn btn-light btnNum operator" onClick={props.div} name="/">÷</button>
             </div>
             <div className="row">
