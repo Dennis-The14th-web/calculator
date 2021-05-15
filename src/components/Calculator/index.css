@@ -6,7 +6,7 @@
   resize: horizontal;
   justify-content: flex-end;
   font-size: 2.5em;
-  background-color: #353538;
+  background-color: #5a5a61;
   color: #ffffff;
   padding: 0.5em 0.2em 0 0;
   margin-top: 2.5em;
@@ -15,27 +15,29 @@
 }
 
 .btnNum {
-    min-height: 1.5em;
+    min-height: 2.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 300;
     font-size: 1.2em;
-    background-color: #6c6a74;
+    background-color: #7e7e80;
     color: #fff;
     flex: 1;
-    outline: 1px solid #0c0c0c;
+    outline: 1px solid #424144;
 }
 
 .operator {
-    background-color: #fe9241;
+    /* background-color: #fdb71f; */
+    background-color: #f89f33;
     color: #ffffff;
     font-size: 1.2em;
     font-weight: 300;
 }
 
 .style {
-  background-color: #444346;
+  background-color: #666568;
+  outline: 1px solid #424144;
 }
 
 #clear-btn {
@@ -46,10 +48,9 @@
   align-items: center;
   font-weight: 300;
   font-size: 1.2em;
-  background-color: #6c6a74;
+  background-color: #7e7e80;
   color: #fff;
   flex: 1;
-  outline: 1px solid #0c0c0c;
- 
+  outline: 1px solid #424144;
 }
 
