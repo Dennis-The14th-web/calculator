@@ -8,8 +8,6 @@
 
 ### Application Demo
 
-- Click <a href="https://react-app-basic-calculator.herokuapp.com/">here</a> to view application.
-
 <a href="https://giphy.com/gif/3facxx"><img src="https://media.giphy.com/media/wnl8rzkCmAZsUoxbOo/giphy.gif" title="made at giphy.com"/></a>
 <a href="https://giphy.com/gif/3facxx"><img src="https://media.giphy.com/media/gBpFDDM9kJHUQGeI0M/giphy.gif" title="made at giphy.com"/></a>
 <a href="https://giphy.com/gif/3facxx"><img src="https://media.giphy.com/media/xg78rlh5qKdVqoVgDR/giphy.gif" title="made at giphy.com"/></a>
